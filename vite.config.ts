@@ -4,8 +4,9 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/PWA-cat-jump/', 
-  plugins: [
+ export default defineConfig({
+  base: '/PWA-cat-jump/', // 👈 Asegúrate de que coincida exactamente con el nombre de tu repo
+  plugins: [react(), VitePWA(/* ...configuración... */)]
     react(),
     VitePWA({
       strategies: 'injectManifest',
